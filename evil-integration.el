@@ -208,8 +208,16 @@
              company-select-mouse
              company-show-doc-buffer
              company-show-location
+             company-filter-candidates
+             ;; Ignore keystrokes when `company-search-mode' is active
              company-search-candidates
-             company-filter-candidates))))
+             company-search-printing-char
+             company-search-other-char
+             company-search-toggle-filtering
+             company-search-repeat-forward
+             company-search-repeat-backward
+             company-search-abort
+             company-search-delete-char))))
 
 ;;; Eval last sexp
 (defun evil--preceding-sexp (command &rest args)
