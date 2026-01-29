@@ -194,7 +194,10 @@
            '(company-complete-mouse
              company-complete-number
              company-complete-selection
-             company-complete-common))
+             company-complete-common
+             ;; Calling company-complete twice modifies the buffer; this need to
+             ;; be recorded.
+             company-complete))
 
      (mapc #'evil-declare-ignore-repeat
            '(company-abort
